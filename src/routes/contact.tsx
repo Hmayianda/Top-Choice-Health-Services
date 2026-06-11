@@ -4,18 +4,19 @@ import { MapPin, Phone, Printer, Mail, Clock, ChevronDown, CheckCircle2 } from "
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/ui/FadeUp";
+import { sendContactMessage } from "@/lib/api/contact.functions";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us | Top Choice Health Services LLC | Port Orchard, WA" },
+      { title: "Contact Us | Top Choice Health Services | Port Orchard, WA" },
       {
         name: "description",
         content:
-          "Contact Top Choice Health Services LLC to schedule a tour, ask questions, or learn more about our adult family home in Port Orchard, WA. Call 360-443-2310.",
+          "Contact Top Choice Health Services to schedule a tour, ask questions, or learn more about our adult family home in Port Orchard, WA. Call 360-443-2310.",
       },
-      { property: "og:title", content: "Contact Us | Top Choice Health Services LLC" },
+      { property: "og:title", content: "Contact Us | Top Choice Health Services" },
       {
         property: "og:description",
         content: "Schedule a tour or ask questions. Call 360-443-2310.",
@@ -71,14 +72,35 @@ function Contact() {
 
 function ContactForm() {
   const [sent, setSent] = useState(false);
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [error, setError] = useState<string | null>(null);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
+
     const fd = new FormData(e.currentTarget);
-    // TODO: Connect to email service (EmailJS / Formspree / backend API)
-    console.log("Contact form submission:", Object.fromEntries(fd.entries()));
-    setSent(true);
-    e.currentTarget.reset();
+    const data = {
+      name: String(fd.get("name") ?? "").trim(),
+      phone: String(fd.get("phone") ?? "").trim(),
+      email: String(fd.get("email") ?? "").trim(),
+      source: String(fd.get("source") ?? "").trim(),
+      message: String(fd.get("message") ?? "").trim(),
+    };
+
+    try {
+      await sendContactMessage({ data });
+      setSent(true);
+      e.currentTarget.reset();
+    } catch (err) {
+      console.error(err);
+      setError(
+        err instanceof Error
+          ? err.message
+          : "There was a problem sending your message. Please try again later.",
+      );
+    }
   };
+
   return (
     <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
       <h2 className="font-display text-3xl text-navy-deep">Send Us a Message</h2>
@@ -86,6 +108,12 @@ function ContactForm() {
         <div className="mt-6 flex items-start gap-3 rounded-xl border border-green-300 bg-green-50 p-4 text-sm text-green-800">
           <CheckCircle2 size={20} className="mt-0.5 shrink-0" />
           <span>Thank you! We've received your message and will be in touch shortly.</span>
+        </div>
+      )}
+      {error && (
+        <div className="mt-6 rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">
+          <p>Unable to send your message.</p>
+          <p>{error}</p>
         </div>
       )}
       <form onSubmit={onSubmit} className="mt-6 space-y-5">
@@ -99,6 +127,7 @@ function ContactForm() {
           <select
             id="source"
             name="source"
+            defaultValue="Google"
             className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy-deep focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/30"
           >
             <option>Google</option>
@@ -115,6 +144,7 @@ function ContactForm() {
             id="message"
             name="message"
             rows={5}
+            required
             className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/30"
           />
         </div>

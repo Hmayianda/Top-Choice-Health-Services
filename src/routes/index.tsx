@@ -13,13 +13,13 @@ import { SITE } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Top Choice Health Services LLC | Adult Family Home | Port Orchard, WA" },
+      { title: "Top Choice Health Services" },
       {
         name: "description",
         content:
-          "Top Choice Health Services LLC offers compassionate, personalized adult family home care in Port Orchard, WA. 24-hour care, medication management, memory support, and more.",
+          "Top Choice Health Services offers compassionate, personalized adult family home care in Port Orchard, WA. 24-hour care, medication management, memory support, and more.",
       },
-      { property: "og:title", content: "Top Choice Health Services LLC" },
+      { property: "og:title", content: "Top Choice Health Services" },
       {
         property: "og:description",
         content:

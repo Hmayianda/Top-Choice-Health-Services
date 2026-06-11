@@ -11,13 +11,13 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Our Services | Top Choice Health Services LLC" },
+      { title: "Our Services | Top Choice Health Services" },
       {
         name: "description",
         content:
-          "Explore the full range of care services at Top Choice Health Services LLC — personal care, medication management, memory support, meal prep, and more in Port Orchard, WA.",
+          "Explore the full range of care services at Top Choice Health Services — personal care, medication management, memory support, meal prep, and more in Port Orchard, WA.",
       },
-      { property: "og:title", content: "Our Services | Top Choice Health Services LLC" },
+      { property: "og:title", content: "Our Services | Top Choice Health Services" },
       {
         property: "og:description",
         content:

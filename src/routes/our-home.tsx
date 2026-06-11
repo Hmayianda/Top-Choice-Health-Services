@@ -10,13 +10,13 @@ import { SITE } from "@/lib/site";
 export const Route = createFileRoute("/our-home")({
   head: () => ({
     meta: [
-      { title: "Our Home | Top Choice Health Services LLC | Port Orchard, WA" },
+      { title: "Our Home | Top Choice Health Services | Port Orchard, WA" },
       {
         name: "description",
         content:
-          "Take a virtual look inside Top Choice Health Services LLC — comfortable bedrooms, safe living spaces, and a warm home environment in Port Orchard, WA.",
+          "Take a virtual look inside Top Choice Health Services — comfortable bedrooms, safe living spaces, and a warm home environment in Port Orchard, WA.",
       },
-      { property: "og:title", content: "Our Home | Top Choice Health Services LLC" },
+      { property: "og:title", content: "Our Home | Top Choice Health Services" },
       {
         property: "og:description",
         content:

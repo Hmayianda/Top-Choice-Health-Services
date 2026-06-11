@@ -7,13 +7,13 @@ import { FadeUp } from "@/components/ui/FadeUp";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us | Top Choice Health Services LLC" },
+      { title: "About Us | Top Choice Health Services" },
       {
         name: "description",
         content:
-          "Learn about Top Choice Health Services LLC — our mission, values, and the compassionate team behind our licensed adult family home in Port Orchard, WA.",
+          "Learn about Top Choice Health Services — our mission, values, and the compassionate team behind our licensed adult family home in Port Orchard, WA.",
       },
-      { property: "og:title", content: "About Us | Top Choice Health Services LLC" },
+      { property: "og:title", content: "About Us | Top Choice Health Services" },
       {
         property: "og:description",
         content:
