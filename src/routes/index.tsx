@@ -100,7 +100,7 @@ function Home() {
         {/* Drop-in photo slot */}
         <img
           src="/src/assets/hero-bg.jpg"
-          alt="Caregiver assisting senior resident in a warm home environment"
+          // alt="Caregiver assisting senior resident in a warm home environment"
           className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy-deep/85 via-navy/70 to-healthcare-blue/75" />
