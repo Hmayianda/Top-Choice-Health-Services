@@ -6,6 +6,13 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { SITE } from "@/lib/site";
+import ourhomeHero from "@/assets/safety.jpg";
+import galleryBedrooms from "@/assets/bedroom.jpg";
+import galleryLiving from "@/assets/livingarea.jpg";
+import galleryDining from "@/assets/kitchen.jpg";
+import galleryOutdoor from "@/assets/outdoor.jpg";
+import galleryGathering from "@/assets/common area.jpg";
+import gallerySafety from "@/assets/safety.jpg";
 
 export const Route = createFileRoute("/our-home")({
   head: () => ({
@@ -39,12 +46,12 @@ export const Route = createFileRoute("/our-home")({
 ];*/
 
 const gallery = [
-  { label: "Comfortable Bedrooms",            img: "/src/assets/bedroom.jpg" },
-  { label: "Spacious Living Areas",           img: "/src/assets/livingarea.jpg" },
-  { label: "Dining & Kitchen Spaces",         img: "/src/assets/kitchen.jpg" },
-  { label: "Outdoor & Garden Areas",          img: "/src/assets/outdoor.jpg" },
-  { label: "Common Gathering Rooms",          img: "/src/assets/common area.jpg" },
-  { label: "Safety & Accessibility Features", img: "/src/assets/safety.jpg" },
+  { label: "Comfortable Bedrooms",            img: galleryBedrooms },
+  { label: "Spacious Living Areas",           img: galleryLiving },
+  { label: "Dining & Kitchen Spaces",         img: galleryDining },
+  { label: "Outdoor & Garden Areas",          img: galleryOutdoor },
+  { label: "Common Gathering Rooms",          img: galleryGathering },
+  { label: "Safety & Accessibility Features", img: gallerySafety },
 ];
 
 const features = [
@@ -63,7 +70,7 @@ function OurHome() {
         eyebrow="Our Home"
         title="A Safe Place to Call Home"
         subtitle="Thoughtfully designed spaces where comfort, safety, and warmth come together."
-        image="/src/assets/safety.jpg"
+        image={ourhomeHero}
       />
 
       {/* Gallery */}

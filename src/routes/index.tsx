@@ -9,6 +9,7 @@ import { FadeUp } from "@/components/ui/FadeUp";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { SITE } from "@/lib/site";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,7 +100,7 @@ function Home() {
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-navy-deep via-navy to-healthcare-blue text-white">
         {/* Drop-in photo slot */}
         <img
-          src="/src/assets/hero-bg.jpg"
+          src={heroBg}
           // alt="Caregiver assisting senior resident in a warm home environment"
           className="absolute inset-0 h-full w-full object-cover opacity-100"
         />

@@ -7,6 +7,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import servicesHero from "@/assets/serviceshero.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -56,7 +57,7 @@ function Services() {
         eyebrow="What We Offer"
         title="Comprehensive Care for Every Need"
         subtitle="Personalized services designed around each resident's comfort and wellbeing."
-        image="/src/assets/serviceshero.jpg"
+        image={servicesHero}
       />
 
       <section className="bg-white py-20 sm:py-24">

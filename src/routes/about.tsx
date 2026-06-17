@@ -3,6 +3,7 @@ import { Heart, Shield, Award, Home, Users, Sparkles } from "lucide-react";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/ui/FadeUp";
+import aboutHero from "@/assets/abouthero.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -43,7 +44,7 @@ function About() {
         eyebrow="Our Story"
         title="Compassionate Care Rooted in Family Values"
         subtitle="Learn who we are, what we believe, and why families trust us."
-        image="/src/assets/abouthero.jpg"
+        image={aboutHero}
       />
 
       <section className="py-20 sm:py-24">

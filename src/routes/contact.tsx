@@ -6,6 +6,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/ui/FadeUp";
 import { sendContactMessage } from "@/lib/api/contact.functions";
 import { SITE } from "@/lib/site";
+import contactHero from "@/assets/phoneicon.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -45,7 +46,7 @@ function Contact() {
         title="Get In Touch"
         subtitle="We'd love to answer your questions and welcome your family."
         height="sm"
-        image="/src/assets/phoneicon.jpg"
+        image={contactHero}
       />
 
       <section className="bg-white py-20 sm:py-24">
