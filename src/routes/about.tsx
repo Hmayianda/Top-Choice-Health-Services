@@ -43,6 +43,7 @@ function About() {
         eyebrow="Our Story"
         title="Compassionate Care Rooted in Family Values"
         subtitle="Learn who we are, what we believe, and why families trust us."
+        image="/src/assets/abouthero.jpg"
       />
 
       <section className="py-20 sm:py-24">

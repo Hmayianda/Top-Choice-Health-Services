@@ -45,6 +45,7 @@ function Contact() {
         title="Get In Touch"
         subtitle="We'd love to answer your questions and welcome your family."
         height="sm"
+        image="/src/assets/phoneicon.jpg"
       />
 
       <section className="bg-white py-20 sm:py-24">

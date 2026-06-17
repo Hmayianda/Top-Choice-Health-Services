@@ -29,13 +29,22 @@ export const Route = createFileRoute("/our-home")({
   component: OurHome,
 });
 
-const gallery = [
+/*const gallery = [
   "Comfortable Bedrooms",
   "Spacious Living Areas",
   "Dining & Kitchen Spaces",
   "Outdoor & Garden Areas",
   "Common Gathering Rooms",
   "Safety & Accessibility Features",
+];*/
+
+const gallery = [
+  { label: "Comfortable Bedrooms",            img: "/src/assets/bedroom.jpg" },
+  { label: "Spacious Living Areas",           img: "/src/assets/livingarea.jpg" },
+  { label: "Dining & Kitchen Spaces",         img: "/src/assets/kitchen.jpg" },
+  { label: "Outdoor & Garden Areas",          img: "/src/assets/outdoor.jpg" },
+  { label: "Common Gathering Rooms",          img: "/src/assets/common area.jpg" },
+  { label: "Safety & Accessibility Features", img: "/src/assets/safety.jpg" },
 ];
 
 const features = [
@@ -54,6 +63,7 @@ function OurHome() {
         eyebrow="Our Home"
         title="A Safe Place to Call Home"
         subtitle="Thoughtfully designed spaces where comfort, safety, and warmth come together."
+        image="/src/assets/safety.jpg"
       />
 
       {/* Gallery */}
@@ -67,13 +77,18 @@ function OurHome() {
           </FadeUp>
           {/* Replace gradient backgrounds with real photos — img tags are ready */}
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((label, i) => (
-              <FadeUp key={label} delay={i * 0.05}>
-                <div className="group relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-navy-deep via-navy to-healthcare-blue shadow-md">
-                  <img src={undefined} alt={label} className="absolute inset-0 h-full w-full object-cover opacity-0" />
-                  <div className="absolute inset-0 grid place-items-center bg-gradient-to-t from-navy-deep/80 to-transparent p-6">
-                    <p className="text-center font-display text-2xl font-semibold text-white">{label}</p>
-                  </div>
+            {gallery.map((item, i) => (
+              <FadeUp key={item.label} delay={i * 0.05}>
+                <div className="group relative aspect-video overflow-hidden rounded-2xl shadow-md">
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/30 to-transparent" />
+                  <p className="absolute bottom-5 left-5 font-display text-2xl font-semibold text-white drop-shadow-md">
+                    {item.label}
+                  </p>
                 </div>
               </FadeUp>
             ))}

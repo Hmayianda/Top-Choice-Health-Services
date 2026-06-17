@@ -56,6 +56,7 @@ function Services() {
         eyebrow="What We Offer"
         title="Comprehensive Care for Every Need"
         subtitle="Personalized services designed around each resident's comfort and wellbeing."
+        image="/src/assets/serviceshero.jpg"
       />
 
       <section className="bg-white py-20 sm:py-24">
