@@ -19,7 +19,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Us | Top Choice Health Services" },
       {
         property: "og:description",
-        content: "Schedule a tour or ask questions. Call 360-443-2310.",
+        content: "Schedule a tour or ask questions. Call 201-724-3675.",
       },
       { property: "og:url", content: "/contact" },
     ],
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/contact")({
 const faqs = [
   { q: "What is an Adult Family Home?", a: "An Adult Family Home is a licensed residential home where a small number of adults (typically 2–6) receive personalized care in a family-style setting, as opposed to a large institutional facility." },
   { q: "What services do you provide?", a: "We offer personal care, medication management, memory care support, mobility assistance, meal preparation, 24-hour supervision, companionship, and respite care." },
-  { q: "How do I schedule a tour?", a: "Call us at 360-443-2310, email info@topchoice-health.com, or use the contact form above. We welcome family visits by appointment." },
+  { q: "How do I schedule a tour?", a: "Call us at 201-724-3675, email info@topchoice-health.com, or use the contact form above. We welcome family visits by appointment." },
   { q: "Can family members visit?", a: "Absolutely. We encourage family involvement and welcome visits. We can discuss preferred visiting arrangements during your tour." },
   { q: "What level of care do you provide?", a: "We provide non-medical personal care, supervision, and support. Care plans are individualized and reviewed regularly to adapt to each resident's needs." },
   { q: "Is Top Choice Health Services licensed?", a: "Yes. We are a fully licensed Adult Family Home operating under Washington State Department of Social and Health Services (DSHS) regulations." },

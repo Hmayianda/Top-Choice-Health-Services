@@ -99,9 +99,9 @@ function Home() {
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-navy-deep via-navy to-healthcare-blue text-white">
         {/* Drop-in photo slot */}
         <img
-          src={undefined}
+          src="/src/assets/hero-bg.jpg"
           alt="Caregiver assisting senior resident in a warm home environment"
-          className="absolute inset-0 h-full w-full object-cover opacity-0"
+          className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy-deep/85 via-navy/70 to-healthcare-blue/75" />
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
@@ -304,7 +304,7 @@ function Home() {
                   How do I book an appointment?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  You can call us at 360-443-2310, email info@topchoice-health.com, or fill out our contact form. We welcome family visits by appointment.
+                  You can call us at 201-724-3675, email info@topchoice-health.com, or fill out our contact form. We welcome family visits by appointment.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="faq-4" className="rounded-xl border border-border bg-white px-6 shadow-sm">
