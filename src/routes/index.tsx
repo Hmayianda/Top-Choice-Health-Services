@@ -102,15 +102,15 @@ function Home() {
         <img
           src={heroBg}
           // alt="Caregiver assisting senior resident in a warm home environment"
-          className="absolute inset-0 h-full w-full object-cover opacity-100"
+          className="absolute inset-0 h-full w-full object-cover opacity-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-deep/85 via-navy/70 to-healthcare-blue/75" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-deep/30 via-navy/30 to-healthcare-blue/75" />
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-healthcare-blue/30 blur-3xl" />
 
         <div className="relative mx-auto max-w-5xl px-6 py-24 text-center">
           <FadeUp>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.4em] text-gold">
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-white">
               Licensed Adult Family Home · Port Orchard, WA
             </p>
           </FadeUp>

@@ -1,8 +1,8 @@
-import { a7, a8 } from "./assets/worker-entry-DG7Fj0re.js";
+import { a4, a5 } from "./assets/worker-entry-32XdCqPq.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
 export {
-  a7 as createServerEntry,
-  a8 as default
+  a4 as createServerEntry,
+  a5 as default
 };

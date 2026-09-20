@@ -92,7 +92,7 @@ function ContactForm() {
     try {
       await sendContactMessage({ data });
       setSent(true);
-      e.currentTarget.reset();
+      (e.target as HTMLFormElement).reset();
     } catch (err) {
       console.error(err);
       setError(
