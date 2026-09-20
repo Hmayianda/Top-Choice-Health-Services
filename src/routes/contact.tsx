@@ -182,7 +182,7 @@ function ContactInfo() {
   const items = [
     { Icon: MapPin, text: SITE.address },
     { Icon: Phone, text: SITE.phone, href: SITE.phoneHref },
-    { Icon: Printer, text: `Fax: ${SITE.phone}` },
+    { Icon: Printer, text: `Fax: ${SITE.fax}` },
     { Icon: Mail, text: SITE.email, href: `mailto:${SITE.email}` },
     { Icon: Clock, text: "Available 24 hours, 7 days a week" },
   ];
